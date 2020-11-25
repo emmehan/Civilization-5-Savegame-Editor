@@ -69,6 +69,7 @@ namespace Civ5_Savegame_Editor
 			this.button_SaveAs = new System.Windows.Forms.Button();
 			this.groupBox_Settings = new System.Windows.Forms.GroupBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.radioButton_GameType_HotSeat = new System.Windows.Forms.RadioButton();
 			this.radioButton_GameType_Multiplayer = new System.Windows.Forms.RadioButton();
 			this.radioButton_GameType_Singleplayer = new System.Windows.Forms.RadioButton();
 			this.label_gametype = new System.Windows.Forms.Label();
@@ -80,25 +81,28 @@ namespace Civ5_Savegame_Editor
 			// 
 			// label_LoadFile
 			// 
-			this.label_LoadFile.Location = new System.Drawing.Point(12, 9);
+			this.label_LoadFile.Location = new System.Drawing.Point(8, 6);
+			this.label_LoadFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_LoadFile.Name = "label_LoadFile";
-			this.label_LoadFile.Size = new System.Drawing.Size(116, 25);
+			this.label_LoadFile.Size = new System.Drawing.Size(77, 16);
 			this.label_LoadFile.TabIndex = 0;
 			this.label_LoadFile.Text = "Savegame";
 			this.label_LoadFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// textBox_LoadFile
 			// 
-			this.textBox_LoadFile.Location = new System.Drawing.Point(12, 37);
+			this.textBox_LoadFile.Location = new System.Drawing.Point(8, 24);
+			this.textBox_LoadFile.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox_LoadFile.Name = "textBox_LoadFile";
-			this.textBox_LoadFile.Size = new System.Drawing.Size(688, 26);
+			this.textBox_LoadFile.Size = new System.Drawing.Size(460, 20);
 			this.textBox_LoadFile.TabIndex = 1;
 			// 
 			// button_LoadFile
 			// 
-			this.button_LoadFile.Location = new System.Drawing.Point(706, 37);
+			this.button_LoadFile.Location = new System.Drawing.Point(471, 24);
+			this.button_LoadFile.Margin = new System.Windows.Forms.Padding(2);
 			this.button_LoadFile.Name = "button_LoadFile";
-			this.button_LoadFile.Size = new System.Drawing.Size(123, 33);
+			this.button_LoadFile.Size = new System.Drawing.Size(82, 21);
 			this.button_LoadFile.TabIndex = 2;
 			this.button_LoadFile.Text = "Load File";
 			this.button_LoadFile.UseVisualStyleBackColor = true;
@@ -106,9 +110,10 @@ namespace Civ5_Savegame_Editor
 			// 
 			// button_Save
 			// 
-			this.button_Save.Location = new System.Drawing.Point(734, 220);
+			this.button_Save.Location = new System.Drawing.Point(490, 165);
+			this.button_Save.Margin = new System.Windows.Forms.Padding(2);
 			this.button_Save.Name = "button_Save";
-			this.button_Save.Size = new System.Drawing.Size(95, 33);
+			this.button_Save.Size = new System.Drawing.Size(63, 21);
 			this.button_Save.TabIndex = 4;
 			this.button_Save.Text = "Save";
 			this.button_Save.UseVisualStyleBackColor = true;
@@ -116,9 +121,10 @@ namespace Civ5_Savegame_Editor
 			// 
 			// button_SaveAs
 			// 
-			this.button_SaveAs.Location = new System.Drawing.Point(639, 220);
+			this.button_SaveAs.Location = new System.Drawing.Point(427, 165);
+			this.button_SaveAs.Margin = new System.Windows.Forms.Padding(2);
 			this.button_SaveAs.Name = "button_SaveAs";
-			this.button_SaveAs.Size = new System.Drawing.Size(89, 33);
+			this.button_SaveAs.Size = new System.Drawing.Size(59, 21);
 			this.button_SaveAs.TabIndex = 5;
 			this.button_SaveAs.Text = "Save As";
 			this.button_SaveAs.UseVisualStyleBackColor = true;
@@ -128,28 +134,45 @@ namespace Civ5_Savegame_Editor
 			// 
 			this.groupBox_Settings.Controls.Add(this.panel1);
 			this.groupBox_Settings.Enabled = false;
-			this.groupBox_Settings.Location = new System.Drawing.Point(12, 75);
+			this.groupBox_Settings.Location = new System.Drawing.Point(8, 49);
+			this.groupBox_Settings.Margin = new System.Windows.Forms.Padding(2);
 			this.groupBox_Settings.Name = "groupBox_Settings";
-			this.groupBox_Settings.Size = new System.Drawing.Size(817, 139);
+			this.groupBox_Settings.Padding = new System.Windows.Forms.Padding(2);
+			this.groupBox_Settings.Size = new System.Drawing.Size(545, 112);
 			this.groupBox_Settings.TabIndex = 6;
 			this.groupBox_Settings.TabStop = false;
 			this.groupBox_Settings.Text = "Settings";
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.radioButton_GameType_HotSeat);
 			this.panel1.Controls.Add(this.radioButton_GameType_Multiplayer);
 			this.panel1.Controls.Add(this.radioButton_GameType_Singleplayer);
 			this.panel1.Controls.Add(this.label_gametype);
-			this.panel1.Location = new System.Drawing.Point(6, 25);
+			this.panel1.Location = new System.Drawing.Point(4, 16);
+			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(145, 101);
+			this.panel1.Size = new System.Drawing.Size(105, 92);
 			this.panel1.TabIndex = 2;
+			// 
+			// radioButton_GameType_HotSeat
+			// 
+			this.radioButton_GameType_HotSeat.Location = new System.Drawing.Point(5, 62);
+			this.radioButton_GameType_HotSeat.Margin = new System.Windows.Forms.Padding(2);
+			this.radioButton_GameType_HotSeat.Name = "radioButton_GameType_HotSeat";
+			this.radioButton_GameType_HotSeat.Size = new System.Drawing.Size(79, 16);
+			this.radioButton_GameType_HotSeat.TabIndex = 4;
+			this.radioButton_GameType_HotSeat.TabStop = true;
+			this.radioButton_GameType_HotSeat.Text = "Hot seat";
+			this.radioButton_GameType_HotSeat.UseVisualStyleBackColor = true;
+			this.radioButton_GameType_HotSeat.CheckedChanged += new System.EventHandler(this.radioButton_GameType_HotSeat_CheckedChanged);
 			// 
 			// radioButton_GameType_Multiplayer
 			// 
-			this.radioButton_GameType_Multiplayer.Location = new System.Drawing.Point(6, 65);
+			this.radioButton_GameType_Multiplayer.Location = new System.Drawing.Point(5, 42);
+			this.radioButton_GameType_Multiplayer.Margin = new System.Windows.Forms.Padding(2);
 			this.radioButton_GameType_Multiplayer.Name = "radioButton_GameType_Multiplayer";
-			this.radioButton_GameType_Multiplayer.Size = new System.Drawing.Size(119, 24);
+			this.radioButton_GameType_Multiplayer.Size = new System.Drawing.Size(79, 16);
 			this.radioButton_GameType_Multiplayer.TabIndex = 3;
 			this.radioButton_GameType_Multiplayer.TabStop = true;
 			this.radioButton_GameType_Multiplayer.Text = "Multiplayer";
@@ -158,9 +181,10 @@ namespace Civ5_Savegame_Editor
 			// 
 			// radioButton_GameType_Singleplayer
 			// 
-			this.radioButton_GameType_Singleplayer.Location = new System.Drawing.Point(6, 35);
+			this.radioButton_GameType_Singleplayer.Location = new System.Drawing.Point(6, 23);
+			this.radioButton_GameType_Singleplayer.Margin = new System.Windows.Forms.Padding(2);
 			this.radioButton_GameType_Singleplayer.Name = "radioButton_GameType_Singleplayer";
-			this.radioButton_GameType_Singleplayer.Size = new System.Drawing.Size(136, 24);
+			this.radioButton_GameType_Singleplayer.Size = new System.Drawing.Size(91, 16);
 			this.radioButton_GameType_Singleplayer.TabIndex = 2;
 			this.radioButton_GameType_Singleplayer.TabStop = true;
 			this.radioButton_GameType_Singleplayer.Text = "Singleplayer";
@@ -169,9 +193,10 @@ namespace Civ5_Savegame_Editor
 			// 
 			// label_gametype
 			// 
-			this.label_gametype.Location = new System.Drawing.Point(3, 9);
+			this.label_gametype.Location = new System.Drawing.Point(2, 6);
+			this.label_gametype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label_gametype.Name = "label_gametype";
-			this.label_gametype.Size = new System.Drawing.Size(100, 23);
+			this.label_gametype.Size = new System.Drawing.Size(67, 15);
 			this.label_gametype.TabIndex = 1;
 			this.label_gametype.Text = "Game Type";
 			// 
@@ -187,9 +212,9 @@ namespace Civ5_Savegame_Editor
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(841, 263);
+			this.ClientSize = new System.Drawing.Size(561, 197);
 			this.Controls.Add(this.groupBox_Settings);
 			this.Controls.Add(this.button_SaveAs);
 			this.Controls.Add(this.button_Save);
@@ -197,6 +222,7 @@ namespace Civ5_Savegame_Editor
 			this.Controls.Add(this.textBox_LoadFile);
 			this.Controls.Add(this.label_LoadFile);
 			this.Icon = global::Civ5_Savegame_Editor.Icon.Civ5Icon;
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MainForm";
 			this.Text = "Civ5 Savegame Editor";
 			this.groupBox_Settings.ResumeLayout(false);
@@ -205,5 +231,7 @@ namespace Civ5_Savegame_Editor
 			this.PerformLayout();
 
 		}
+
+		private System.Windows.Forms.RadioButton radioButton_GameType_HotSeat;
 	}
 }
