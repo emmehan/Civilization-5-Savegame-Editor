@@ -41,6 +41,8 @@ namespace Civ5_Savegame_Editor
 		private const int offset_gametype = 44;
 		private const byte setting_gametype_singleplayer = 0x0;	
 		private const byte setting_gametype_multiplayer = 0x1;
+		private const byte setting_gametype_hot_seat = 0x2;
+
 		byte[] filedump;
 		
 		public MainForm()
@@ -85,13 +87,19 @@ namespace Civ5_Savegame_Editor
 					
 						/* Set RadioButtons */
 						if(	(setting_gametype_singleplayer == byte_setting_multiplayer_singleplayer) || 
-							(setting_gametype_multiplayer == byte_setting_multiplayer_singleplayer) )
+							(setting_gametype_multiplayer == byte_setting_multiplayer_singleplayer) ||
+							(setting_gametype_hot_seat == byte_setting_multiplayer_singleplayer))
 						{
 							/* Game type is valid */
 							if(setting_gametype_singleplayer == byte_setting_multiplayer_singleplayer)
 							{
 								/* Game is a Singleplayer game */
 								radioButton_GameType_Singleplayer.Checked = true;
+							}
+							else if(setting_gametype_hot_seat == byte_setting_multiplayer_singleplayer)
+							{
+								/* Game is a Singleplayer game */
+								radioButton_GameType_HotSeat.Checked = true;
 							}
 							else
 							{
@@ -156,7 +164,7 @@ namespace Civ5_Savegame_Editor
 			catch(Exception exception)
 			{
 				
-			}			
+			}
 		}
 		void RadioButton_GameType_SingleplayerCheckedChanged(object sender, EventArgs e)
 		{
@@ -166,7 +174,7 @@ namespace Civ5_Savegame_Editor
 				if(offset_gametype <= filedump.Length)
 				{
 					filedump[offset_gametype] = setting_gametype_singleplayer;
-				}				
+				}
 			}
 		}
 		void RadioButton_GameType_MultiplayerCheckedChanged(object sender, EventArgs e)
@@ -177,7 +185,19 @@ namespace Civ5_Savegame_Editor
 				if(offset_gametype <= filedump.Length)
 				{
 					filedump[offset_gametype] = setting_gametype_multiplayer;
-				}				
+				}
+			}
+		}
+
+		private void radioButton_GameType_HotSeat_CheckedChanged(object sender, EventArgs e)
+		{
+			if(radioButton_GameType_HotSeat.Checked)
+			{
+				/* set game type in file dump */
+				if(offset_gametype <= filedump.Length)
+				{
+					filedump[offset_gametype] = setting_gametype_hot_seat;
+				}
 			}
 		}
 	}
