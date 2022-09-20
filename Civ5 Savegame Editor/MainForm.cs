@@ -21,8 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
 using System;
-using System.Collections.Generic;
-using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -56,6 +55,7 @@ namespace Civ5_Savegame_Editor
 			
 			/* Set initial directory of File Dialog to base */
 			openFileDialog_LoadFile.InitialDirectory = WorkingDirectory;
+			toolStripStatusLabel_VersionInfo.Text = "v"+Assembly.GetExecutingAssembly().GetName().Version.ToString();
 		}
 		
 		/* Load savegame file */
@@ -73,9 +73,11 @@ namespace Civ5_Savegame_Editor
 				
 				/* Also set directory for SaveAs and enable the buttons */
 				saveFileDialog_SaveAs.InitialDirectory = WorkingDirectory;
+				textBox_LoadFile.Text = path_file_savegame;
+				button_Save.Enabled = true;
+				button_SaveAs.Enabled = true;
 				
 				/* Read Settings and set UI */
-				
 				try
 				{
 					/* Read File */
@@ -98,7 +100,7 @@ namespace Civ5_Savegame_Editor
 							}
 							else if(setting_gametype_hot_seat == byte_setting_multiplayer_singleplayer)
 							{
-								/* Game is a Singleplayer game */
+								/* Game is a HotSeat game */
 								radioButton_GameType_HotSeat.Checked = true;
 							}
 							else
